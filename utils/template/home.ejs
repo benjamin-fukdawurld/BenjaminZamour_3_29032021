@@ -1,3 +1,5 @@
 <main class="main-container">
-    <h2 class="main-container__title">Restaurants</h2>
+    <h2 class="main-container__title" id="RestaurantList">Restaurants</h2>
+    <% main.restaurants.forEach(restaurant => { %> <%- include("restaurant-card", {restaurant}) %>
+    <% }); %>
 </main>
