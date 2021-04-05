@@ -1,0 +1,24 @@
+.footer {
+    background-color: #353535;
+    color: white;
+    padding: 1.5rem;
+
+    &__logo {
+        font-family: $shrikhand;
+    }
+
+    &__nav {
+        &__item {
+            margin: 1rem 0;
+            text-decoration: none;
+            list-style: none;
+            &__link {
+                height: 1rem;
+                &__icon {
+                    line-height: 1rem;
+                    color: white;
+                }
+            }
+        }
+    }
+}
