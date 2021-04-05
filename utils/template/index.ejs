@@ -14,8 +14,8 @@
         <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
     </head>
     <body>
-        <%- include('header', {header: header}); %> <% if (main.type === "home") { %> <%-
-        include('home', {main: main}); %> <% } else {%> <%- include('menu', {main: main}); %> <% }
-        %> <%- include('footer', {footer: footer}); %>
+        <%- include('header', {header: header, isHome: (main.type === "home")}); %> <% if (main.type
+        === "home") { %> <%- include('home', {main: main}); %> <% } else { %> <%- include('menu',
+        {main: main}); %> <% } %> <%- include('footer', {footer: footer}); %>
     </body>
 </html>
