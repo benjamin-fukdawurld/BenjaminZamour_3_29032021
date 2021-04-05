@@ -1,9 +1,10 @@
 const ejs = require("ejs");
 const prettier = require("prettier");
-
 const fs = require("fs/promises");
 
-let header = { backButton: true, location: "Paris, Belleville" };
+const restaurants = require("./restaurants.json");
+
+let header = { backButton: false, location: "Paris, Belleville" };
 
 function render(file, data) {
     return new Promise((resolve, reject) => {
@@ -17,7 +18,15 @@ function render(file, data) {
     });
 }
 
-render("template/index.ejs", { title: "", header, main: { type: "home" }, footer: {} })
+render("template/index.ejs", {
+    title: "",
+    header,
+    main: {
+        type: "home",
+        restaurants
+    },
+    footer: {}
+})
     .then((html) => fs.writeFile("../index.html", html))
     .then(() => console.log("Success"))
     .catch((err) => {
