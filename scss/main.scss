@@ -9,6 +9,34 @@ html {
     font-size: 16px;
 }
 
+.button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    border-radius: 3rem;
+    color: white;
+    background: linear-gradient(170deg, map-get($secondary, 800) 0%, map-get($primary, 800) 90%);
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    &--row {
+        flex-direction: row;
+    }
+
+    &--justify-center {
+        justify-content: center;
+    }
+
+    &--align-center {
+        align-items: center;
+    }
+}
+
 @import "./header";
 @import "./footer";
-@import "./restaurant-list";
+@import "./restaurants";

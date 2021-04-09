@@ -9,9 +9,9 @@ $secondary: makeColorPalette(#ff79da);
 $tertiary: makeColorPalette(#99e2d0);
 
 $colors: (
-    "primary": map-get($primary, 500),
-    "secondary": map-get($secondary, 500),
-    "tertiary": map-get($tertiary, 500)
+    "primary": map-get($primary, 700),
+    "secondary": map-get($secondary, 700),
+    "tertiary": map-get($tertiary, 700)
 );
 
 $screenSizes: (
