@@ -21,22 +21,75 @@ html {
   font-size: 16px;
 }
 
+.button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border-radius: 3rem;
+  color: white;
+  background: linear-gradient(170deg, #ff5ccb 0%, #763cce 90%);
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.flex--row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex--justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex--align-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .logo-container {
   height: 4rem;
-  text-align: center;
+  position: relative;
 }
 
 .logo-container__logo {
-  height: 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.logo-container__back-button {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.5rem;
+  top: calc(50% - 1rem);
+}
+
+.logo-container__back-button:hover {
+  color: #8045d3;
 }
 
 .location {
@@ -78,19 +131,6 @@ html {
   font-weight: 200;
 }
 
-.banner__button {
-  display: inline-block;
-  padding: 1rem 1.5rem;
-  border-radius: 3rem;
-  color: white;
-  background: linear-gradient(120deg, #ff79da 0%, #9356dc 50%) rgba(255, 255, 255, 0.2);
-  background-blend-mode: overlay;
-  background-size: cover;
-  text-align: center;
-  font-size: 0.75rem;
-  font-weight: 700;
-}
-
 .instructions {
   padding: 0.75rem 0.75rem 3rem;
 }
@@ -111,16 +151,27 @@ html {
           align-items: center;
 }
 
+.instructions__field__container {
+  max-width: 700px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .instructions__field__container {
+    margin-left: 2rem;
+  }
+}
+
 .instructions__field__badge {
   color: white;
-  background-color: #9356dc;
+  background-color: #8045d3;
   font-size: 0.75rem;
   width: 0.75rem;
   text-align: center;
   padding: 0.25rem;
   border-radius: 100%;
   position: absolute;
-  left: 1rem;
+  left: 0.5rem;
 }
 
 .instructions__field__button {
@@ -139,7 +190,7 @@ html {
 }
 
 .instructions__field__button__icon--is-primary {
-  color: #9356dc;
+  color: #8045d3;
 }
 
 .footer {
@@ -167,13 +218,30 @@ html {
   color: white;
 }
 
-.main-container {
+.restaurant-list {
   background-color: #eaeaea;
   padding: 1rem 0.75rem;
+  margin: 0 auto;
 }
 
-.main-container__title {
+.restaurant-list__title {
   margin: 2rem 0;
+}
+
+.restaurant-list__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .restaurant-card {
@@ -185,10 +253,22 @@ html {
           box-shadow: 0px 3px 5px 2px #b0b0b0;
 }
 
+@media screen and (max-width: 324px) {
+  .restaurant-card {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 325px) {
+  .restaurant-card {
+    width: clamp(320px, 30vw, 400px);
+  }
+}
+
 .restaurant-card:hover {
-  background-color: #fafafa;
-  -webkit-box-shadow: 0px 3px 5px 3px #a0a0a0;
-          box-shadow: 0px 3px 5px 3px #a0a0a0;
+  background-color: #eaeaea;
+  -webkit-box-shadow: 0px 3px 5px 3px #b389e7;
+          box-shadow: 0px 3px 5px 3px #b389e7;
 }
 
 .restaurant-card__image {
@@ -237,6 +317,119 @@ html {
 
 .restaurant-card__info__like:hover {
   font-weight: 600;
-  color: #9356dc;
+  color: #8045d3;
+}
+
+.restaurant-menu {
+  background-color: #f6f6f6;
+  padding-bottom: 2rem;
+}
+
+.restaurant-menu__banner {
+  position: relative;
+}
+
+.restaurant-menu__banner > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.restaurant-menu__banner > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 4rem);
+  padding: 1rem 2rem;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  background-color: #f6f6f6;
+}
+
+.restaurant-menu__banner__name {
+  display: inline-block;
+  padding: 1rem 0;
+  font-family: "Shrikhand", cursive;
+}
+
+.restaurant-menu__banner__like {
+  font-size: 1.5rem;
+}
+
+.restaurant-menu__banner__like:hover {
+  font-weight: 600;
+  color: #8045d3;
+}
+
+.restaurant-menu .button {
+  margin: 0 auto;
+}
+
+.menu-section {
+  padding: 1rem;
+}
+
+.menu-section__title {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.menu-section__title:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  width: 2rem;
+  background: #99e2d0;
+}
+
+.meal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  margin: 1rem auto;
+  background-color: white;
+  border-radius: 1rem;
+  max-width: 750px;
+}
+
+.meal__name {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.meal__desc {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.meal__price {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 /*# sourceMappingURL=main.css.map */
