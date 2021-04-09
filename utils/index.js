@@ -4,8 +4,6 @@ const fs = require("fs/promises");
 
 const restaurants = require("./restaurants.json");
 
-let header = { backButton: false, location: "Paris, Belleville" };
-
 function render(file, data) {
     return new Promise((resolve, reject) => {
         ejs.renderFile(file, data, {}, function (err, html) {
@@ -20,14 +18,33 @@ function render(file, data) {
 
 render("template/index.ejs", {
     title: "",
-    header,
+    header: { backButton: false, location: "Paris, Belleville" },
     main: {
         type: "home",
         restaurants
     },
     footer: {}
 })
-    .then((html) => fs.writeFile("../index.html", html))
+    .then((html) => {
+        fs.writeFile("../index.html", html);
+    })
+    .then(() =>
+        Promise.all(
+            restaurants.map((restaurant) => {
+                return render("template/index.ejs", {
+                    title: restaurant.name,
+                    header: { backButton: true },
+                    main: {
+                        type: "menu",
+                        restaurant
+                    },
+                    footer: {}
+                }).then((html) => {
+                    fs.writeFile("../" + restaurant.url, html);
+                });
+            })
+        )
+    )
     .then(() => console.log("Success"))
     .catch((err) => {
         throw new Error(err);
