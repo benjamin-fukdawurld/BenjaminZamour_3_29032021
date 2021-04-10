@@ -1,5 +1,5 @@
 <article class="restaurant-card">
-    <a href="<%- restaurant.link %>">
+    <a href="<%- restaurant.url %>">
         <div class="restaurant-card__image">
             <% if(restaurant.isNew) { %>
             <div class="restaurant-card__image__badge">Nouveau</div>
@@ -8,7 +8,7 @@
         </div>
     </a>
     <div class="restaurant-card__info__container">
-        <a href="<%- restaurant.link %>">
+        <a href="<%- restaurant.url %>">
             <section class="restaurant-card__info">
                 <h3 class="restaurant-card__info__name"><%- restaurant.name %></h3>
                 <p class="restaurant-card__info__location"><%- restaurant.location %></p>

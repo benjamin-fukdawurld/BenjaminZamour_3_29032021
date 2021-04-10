@@ -9,9 +9,9 @@ $secondary: makeColorPalette(#ff79da);
 $tertiary: makeColorPalette(#99e2d0);
 
 $colors: (
-    "primary": map-get($primary, 500),
-    "secondary": map-get($secondary, 500),
-    "tertiary": map-get($tertiary, 500)
+    "primary": map-get($primary, 700),
+    "secondary": map-get($secondary, 700),
+    "tertiary": map-get($tertiary, 700)
 );
 
 $screenSizes: (
@@ -19,3 +19,7 @@ $screenSizes: (
     "medium": 991px,
     "large": 1199px
 );
+
+@mixin color-gradient($from: map-get($secondary, 800), $to: map-get($primary, 800)) {
+    background: linear-gradient(170deg, $from 0%, $to 90%);
+}

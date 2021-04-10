@@ -1,1 +1,20 @@
-<main></main>
+<main class="restaurant-menu">
+    <div class="restaurant-menu__banner">
+        <img
+            src="images/restaurants/<%- main.restaurant.image %>"
+            alt="<%- main.restaurant.name %>"
+        />
+        <div>
+            <h2 class="restaurant-menu__banner__name"><%- main.restaurant.name %></h2>
+            <i class="restaurant-menu__banner__like far fa-heart"></i>
+        </div>
+    </div>
+    <div class="restaurant-menu__meals">
+        <%- include("menu-section", {name: "Entrées", meals: main.restaurant.starters}) %> <%-
+        include("menu-section", {name: "Plats", meals: main.restaurant.dishes}) %><%-
+        include("menu-section", {name: "Desserts", meals: main.restaurant.desserts}) %>
+    </div>
+    <div class="flex flex--row flex--justify-center flex--align-center">
+        <span class="button">Commandez</span>
+    </div>
+</main>

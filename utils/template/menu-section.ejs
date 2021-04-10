@@ -1,0 +1,14 @@
+<section class="menu-section">
+    <h3 class="menu-section__title"><%- name %></h3>
+    <div class="menu-section__meals">
+        <% meals.forEach((meal) => { %>
+        <article class="meal">
+            <div>
+                <h4 class="meal__name"><%- meal.name %></h4>
+                <p class="meal__desc"><%- meal.desc %></p>
+            </div>
+            <p class="meal__price"><%- meal.price %>€</p>
+        </article>
+        <% }) %>
+    </div>
+</section>
