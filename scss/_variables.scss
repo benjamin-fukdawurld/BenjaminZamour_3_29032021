@@ -19,3 +19,7 @@ $screenSizes: (
     "medium": 991px,
     "large": 1199px
 );
+
+@mixin color-gradient($from: map-get($secondary, 800), $to: map-get($primary, 800)) {
+    background: linear-gradient(170deg, $from 0%, $to 90%);
+}

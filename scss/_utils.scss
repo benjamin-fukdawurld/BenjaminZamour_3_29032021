@@ -1,6 +1,3 @@
-// Put in whatever color here, the generator will use it as the 500 value of the palette!
-$testColor: #9356dc;
-
 @function tetrad($color) {
     $hue: hue($color);
     $saturation: saturation($color);

@@ -15,10 +15,28 @@ html {
     padding: 1rem 1.5rem;
     border-radius: 3rem;
     color: white;
-    background: linear-gradient(170deg, map-get($secondary, 800) 0%, map-get($primary, 800) 90%);
     text-align: center;
     font-size: 0.75rem;
     font-weight: 700;
+
+    @include color-gradient;
+    background-position: center;
+    transition: background 0.8s;
+    &:hover {
+        background: map-get($secondary, 800)
+            radial-gradient(
+                circle,
+                transparent 1%,
+                map-get($primary, 900) 1%,
+                map-get($secondary, 900) 1%
+            )
+            center/15000%;
+    }
+    &:active {
+        background-color: map-get($tertiary, 900);
+        background-size: 100%;
+        transition: background 0s;
+    }
 }
 
 .flex {

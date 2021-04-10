@@ -27,10 +27,24 @@ html {
   padding: 1rem 1.5rem;
   border-radius: 3rem;
   color: white;
-  background: linear-gradient(170deg, #ff5ccb 0%, #763cce 90%);
   text-align: center;
   font-size: 0.75rem;
   font-weight: 700;
+  background: linear-gradient(170deg, #ff5ccb 0%, #763cce 90%);
+  background-position: center;
+  -webkit-transition: background 0.8s;
+  transition: background 0.8s;
+}
+
+.button:hover {
+  background: #ff5ccb radial-gradient(circle, transparent 1%, #642bc5 1%, #ff49c2 1%) center/15000%;
+}
+
+.button:active {
+  background-color: #6bcfb3;
+  background-size: 100%;
+  -webkit-transition: background 0s;
+  transition: background 0s;
 }
 
 .flex {
