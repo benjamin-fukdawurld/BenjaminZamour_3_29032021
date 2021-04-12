@@ -12,4 +12,4 @@ Le cahier des charges est disponible [ici](docs/Brief_creatif_-_Ohmyfood!.pdf)
 
 Une synthèse des consigne est disponible [ici](docs/instructions.md).
 
-La page générée est visible [ici](https://benjamin-fukdawurld.github.io/BenjaminZAMOUR_2_29032021/).
+La page générée est visible [ici](https://benjamin-fukdawurld.github.io/BenjaminZamour_3_29032021/).
