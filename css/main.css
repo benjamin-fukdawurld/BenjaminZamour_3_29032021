@@ -13,12 +13,21 @@ a {
   text-decoration: none;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-}
-
 html {
   font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    border-left: solid #eee;
+    border-right: solid #fafafa;
+  }
 }
 
 .button {
@@ -61,6 +70,18 @@ html {
           flex-direction: row;
 }
 
+.flex--column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex--wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .flex--justify-center {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -71,6 +92,31 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer {
+  background-color: #353535;
+  color: white;
+  padding: 1.5rem;
+}
+
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+}
+
+.footer__nav__item {
+  margin: 1rem 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.footer__nav__item__link {
+  height: 1rem;
+}
+
+.footer__nav__item__link__icon {
+  line-height: 1rem;
+  color: white;
 }
 
 .logo-container {
@@ -127,22 +173,6 @@ html {
 
 .location__container__icon {
   height: 1rem;
-}
-
-.banner {
-  background-color: #f6f6f6;
-  height: 18rem;
-  text-align: center;
-  padding: 0 1rem;
-}
-
-.banner__title {
-  padding: 3rem 3rem 1rem;
-}
-
-.banner__subtitle {
-  padding-bottom: 2rem;
-  font-weight: 200;
 }
 
 .instructions {
@@ -207,29 +237,20 @@ html {
   color: #8045d3;
 }
 
-.footer {
-  background-color: #353535;
-  color: white;
-  padding: 1.5rem;
+.banner {
+  background-color: #f6f6f6;
+  height: 18rem;
+  text-align: center;
+  padding: 0 1rem;
 }
 
-.footer__logo {
-  font-family: "Shrikhand", cursive;
+.banner__title {
+  padding: 3rem 3rem 1rem;
 }
 
-.footer__nav__item {
-  margin: 1rem 0;
-  text-decoration: none;
-  list-style: none;
-}
-
-.footer__nav__item__link {
-  height: 1rem;
-}
-
-.footer__nav__item__link__icon {
-  line-height: 1rem;
-  color: white;
+.banner__subtitle {
+  padding-bottom: 2rem;
+  font-weight: 200;
 }
 
 .restaurant-list {
@@ -267,13 +288,13 @@ html {
           box-shadow: 0px 3px 5px 2px #b0b0b0;
 }
 
-@media screen and (max-width: 324px) {
+@media screen and (max-width: 767px) {
   .restaurant-card {
     width: 100%;
   }
 }
 
-@media screen and (min-width: 325px) {
+@media screen and (min-width: 768px) {
   .restaurant-card {
     width: clamp(320px, 30vw, 400px);
   }
@@ -341,12 +362,16 @@ html {
 
 .restaurant-menu__banner {
   position: relative;
+  max-height: 500px;
+  overflow: hidden;
 }
 
 .restaurant-menu__banner > img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .restaurant-menu__banner > div {

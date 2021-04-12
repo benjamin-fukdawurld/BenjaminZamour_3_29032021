@@ -1,60 +1,8 @@
-@import "./reset";
-@import "./variables";
+@import "./base/reset";
+@import "./components/flex";
 
-body {
-    font-family: $robottoFont;
-}
+@import "./layout/footer";
+@import "./pages/home/header";
+@import "./pages/home/restaurant-list";
 
-html {
-    font-size: 16px;
-}
-
-.button {
-    cursor: pointer;
-    display: inline-block;
-    padding: 1rem 1.5rem;
-    border-radius: 3rem;
-    color: white;
-    text-align: center;
-    font-size: 0.75rem;
-    font-weight: 700;
-
-    @include color-gradient;
-    background-position: center;
-    transition: background 0.8s;
-    &:hover {
-        background: map-get($secondary, 800)
-            radial-gradient(
-                circle,
-                transparent 1%,
-                map-get($primary, 900) 1%,
-                map-get($secondary, 900) 1%
-            )
-            center/15000%;
-    }
-    &:active {
-        background-color: map-get($tertiary, 900);
-        background-size: 100%;
-        transition: background 0s;
-    }
-}
-
-.flex {
-    display: flex;
-    width: 100%;
-    &--row {
-        flex-direction: row;
-    }
-
-    &--justify-center {
-        justify-content: center;
-    }
-
-    &--align-center {
-        align-items: center;
-    }
-}
-
-@import "./header";
-@import "./footer";
-@import "./restaurants";
+@import "./pages/restaurant/restaurants";

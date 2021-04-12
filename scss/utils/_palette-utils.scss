@@ -14,6 +14,7 @@
     $blue: blue($back) * blue($fore) / 255;
     @return rgb($red, $green, $blue);
 }
+
 @function makeColorPalette($color) {
     $light: #fff;
     $dark: multiply($color, $color);

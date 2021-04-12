@@ -1,0 +1,27 @@
+.meal {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem auto;
+    background-color: white;
+    border-radius: 1rem;
+    max-width: 750px;
+
+    &__name {
+        font-weight: 500;
+        font-size: 0.875rem;
+    }
+
+    &__desc {
+        font-weight: 300;
+        font-size: 0.8rem;
+    }
+
+    &__price {
+        align-self: end;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+}

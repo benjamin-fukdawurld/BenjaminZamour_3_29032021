@@ -1,0 +1,16 @@
+.location {
+    height: 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #cfcfcf;
+    background: linear-gradient(180deg, #cfcfcf 0%, #e0e0e0 40%, #eaeaea 90%, #eaeaea 100%);
+    color: #353535;
+
+    &__container {
+        &__icon {
+            height: 1rem;
+        }
+    }
+}
