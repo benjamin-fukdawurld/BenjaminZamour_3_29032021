@@ -21,10 +21,10 @@ html {
 
 body {
     font-family: $robottoFont;
-    max-width: 992px;
+    max-width: map-get($screenSizes, medium) + 1px;
     margin: 0 auto;
 
-    @media screen and (min-width: map-get($screenSizes, "medium") + 1px) {
+    @include for-device-gt(medium) {
         border-left: solid #eee;
         border-right: solid #fafafa;
     }
