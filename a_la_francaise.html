@@ -54,113 +54,166 @@
                     <h2 class="restaurant-menu__banner__name">
                         À la française
                     </h2>
-                    <i class="restaurant-menu__banner__like far fa-heart"></i>
+                    <i class="like-button far fa-heart">
+                        <i class="like-button__filled far fa-heart"></i>
+                    </i>
                 </div>
             </div>
             <div class="restaurant-menu__meals">
-                <section class="menu-section">
+                <section class="menu-section menu-section--starters">
                     <h3 class="menu-section__title">Entrées</h3>
                     <div class="menu-section__meals">
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">
-                                    Tartare de poulpe acidulé
-                                </h4>
-                                <p class="meal__desc">Aux zestes d'orange</p>
+                        <article class="meal" data-meal-index="0">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Tartare de poulpe acidulé
+                                    </h4>
+                                    <p class="meal__desc">
+                                        Aux zestes d'orange
+                                    </p>
+                                </div>
+                                <p class="meal__price">25€</p>
                             </div>
-                            <p class="meal__price">25€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">
-                                    Velouté de légumes d'antan
-                                </h4>
-                                <p class="meal__desc">
-                                    Carotte, panais, topinambour
-                                </p>
+                        <article class="meal" data-meal-index="1">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Velouté de légumes d'antan
+                                    </h4>
+                                    <p class="meal__desc">
+                                        Carotte, panais, topinambour
+                                    </p>
+                                </div>
+                                <p class="meal__price">35€</p>
                             </div>
-                            <p class="meal__price">35€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">Soupe à l'oignon</h4>
-                                <p class="meal__desc">Revisitée</p>
+                        <article class="meal" data-meal-index="2">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">Soupe à l'oignon</h4>
+                                    <p class="meal__desc">Revisitée</p>
+                                </div>
+                                <p class="meal__price">20€</p>
                             </div>
-                            <p class="meal__price">20€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
                     </div>
                 </section>
-                <section class="menu-section">
+                <section class="menu-section menu-section--dishes">
                     <h3 class="menu-section__title">Plats</h3>
                     <div class="menu-section__meals">
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">
-                                    Coquilles Saint-Jacques
-                                </h4>
-                                <p class="meal__desc">
-                                    Accompagnées d'une purée de panais
-                                </p>
+                        <article class="meal" data-meal-index="0">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Coquilles Saint-Jacques
+                                    </h4>
+                                    <p class="meal__desc">
+                                        Accompagnées d'une purée de panais
+                                    </p>
+                                </div>
+                                <p class="meal__price">40€</p>
                             </div>
-                            <p class="meal__price">40€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">Magret de canard</h4>
-                                <p class="meal__desc">
-                                    Et parmentier de pommes de terre
-                                </p>
+                        <article class="meal" data-meal-index="1">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">Magret de canard</h4>
+                                    <p class="meal__desc">
+                                        Et parmentier de pommes de terre
+                                    </p>
+                                </div>
+                                <p class="meal__price">35€</p>
                             </div>
-                            <p class="meal__price">35€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">
-                                    Pigeonneau d’Ille-et-Vilaine
-                                </h4>
-                                <p class="meal__desc">
-                                    Sur son lit de gnocchis aux légumes
-                                </p>
+                        <article class="meal" data-meal-index="2">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Pigeonneau d’Ille-et-Vilaine
+                                    </h4>
+                                    <p class="meal__desc">
+                                        Sur son lit de gnocchis aux légumes
+                                    </p>
+                                </div>
+                                <p class="meal__price">44€</p>
                             </div>
-                            <p class="meal__price">44€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
                     </div>
                 </section>
-                <section class="menu-section">
+                <section class="menu-section menu-section--desserts">
                     <h3 class="menu-section__title">Desserts</h3>
                     <div class="menu-section__meals">
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">
-                                    Pétales de violettes glacés
-                                </h4>
-                                <p class="meal__desc">Et purée de noisettes</p>
+                        <article class="meal" data-meal-index="0">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Pétales de violettes glacés
+                                    </h4>
+                                    <p class="meal__desc">
+                                        Et purée de noisettes
+                                    </p>
+                                </div>
+                                <p class="meal__price">18€</p>
                             </div>
-                            <p class="meal__price">18€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">Fondant au chocolat</h4>
-                                <p class="meal__desc">Revisité</p>
+                        <article class="meal" data-meal-index="1">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Fondant au chocolat
+                                    </h4>
+                                    <p class="meal__desc">Revisité</p>
+                                </div>
+                                <p class="meal__price">22€</p>
                             </div>
-                            <p class="meal__price">22€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">
-                                    Millefeuille croustillant
-                                </h4>
-                                <p class="meal__desc">
-                                    Myrtilles et pâte d’amande
-                                </p>
+                        <article class="meal" data-meal-index="2">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Millefeuille croustillant
+                                    </h4>
+                                    <p class="meal__desc">
+                                        Myrtilles et pâte d’amande
+                                    </p>
+                                </div>
+                                <p class="meal__price">23€</p>
                             </div>
-                            <p class="meal__price">23€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
                     </div>
                 </section>

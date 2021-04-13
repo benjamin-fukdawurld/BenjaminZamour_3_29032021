@@ -48,7 +48,6 @@
 
         &:hover &__badge {
             background-color: map-get($primary, 400);
-            transform: background-color;
         }
 
         &__panel {
@@ -75,7 +74,6 @@
 
         &:hover &__panel__icon--is-primary {
             color: map-get($primary, 400);
-            transform: color;
         }
     }
 }

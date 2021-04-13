@@ -54,101 +54,154 @@
                     <h2 class="restaurant-menu__banner__name">
                         Le délice des sens
                     </h2>
-                    <i class="restaurant-menu__banner__like far fa-heart"></i>
+                    <i class="like-button far fa-heart">
+                        <i class="like-button__filled far fa-heart"></i>
+                    </i>
                 </div>
             </div>
             <div class="restaurant-menu__meals">
-                <section class="menu-section">
+                <section class="menu-section menu-section--starters">
                     <h3 class="menu-section__title">Entrées</h3>
                     <div class="menu-section__meals">
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">Tartare de thon</h4>
-                                <p class="meal__desc">Assaisonné au yuzu</p>
+                        <article class="meal" data-meal-index="0">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">Tartare de thon</h4>
+                                    <p class="meal__desc">Assaisonné au yuzu</p>
+                                </div>
+                                <p class="meal__price">25€</p>
                             </div>
-                            <p class="meal__price">25€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">
-                                    Bouchée de homard croustillant
-                                </h4>
-                                <p class="meal__desc">
-                                    Et sa farandole de petits légumes
-                                </p>
+                        <article class="meal" data-meal-index="1">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Bouchée de homard croustillant
+                                    </h4>
+                                    <p class="meal__desc">
+                                        Et sa farandole de petits légumes
+                                    </p>
+                                </div>
+                                <p class="meal__price">35€</p>
                             </div>
-                            <p class="meal__price">35€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">Velouté de cèpes</h4>
-                                <p class="meal__desc">Aux truffes</p>
+                        <article class="meal" data-meal-index="2">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">Velouté de cèpes</h4>
+                                    <p class="meal__desc">Aux truffes</p>
+                                </div>
+                                <p class="meal__price">20€</p>
                             </div>
-                            <p class="meal__price">20€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
                     </div>
                 </section>
-                <section class="menu-section">
+                <section class="menu-section menu-section--dishes">
                     <h3 class="menu-section__title">Plats</h3>
                     <div class="menu-section__meals">
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">
-                                    Poulet rôti aux herbes de Provence
-                                </h4>
-                                <p class="meal__desc">Et sa crème de truffe</p>
+                        <article class="meal" data-meal-index="0">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Poulet rôti aux herbes de Provence
+                                    </h4>
+                                    <p class="meal__desc">
+                                        Et sa crème de truffe
+                                    </p>
+                                </div>
+                                <p class="meal__price">40€</p>
                             </div>
-                            <p class="meal__price">40€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">Langouste rôtie</h4>
-                                <p class="meal__desc">
-                                    Et ses légumes de saison
-                                </p>
+                        <article class="meal" data-meal-index="1">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">Langouste rôtie</h4>
+                                    <p class="meal__desc">
+                                        Et ses légumes de saison
+                                    </p>
+                                </div>
+                                <p class="meal__price">35€</p>
                             </div>
-                            <p class="meal__price">35€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">Côte de boeuf Angus</h4>
-                                <p class="meal__desc">Et sa purée de panais</p>
+                        <article class="meal" data-meal-index="2">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Côte de boeuf Angus
+                                    </h4>
+                                    <p class="meal__desc">
+                                        Et sa purée de panais
+                                    </p>
+                                </div>
+                                <p class="meal__price">44€</p>
                             </div>
-                            <p class="meal__price">44€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
                     </div>
                 </section>
-                <section class="menu-section">
+                <section class="menu-section menu-section--desserts">
                     <h3 class="menu-section__title">Desserts</h3>
                     <div class="menu-section__meals">
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">
-                                    Farandole de desserts
-                                </h4>
-                                <p class="meal__desc">Du chef</p>
+                        <article class="meal" data-meal-index="0">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Farandole de desserts
+                                    </h4>
+                                    <p class="meal__desc">Du chef</p>
+                                </div>
+                                <p class="meal__price">18€</p>
                             </div>
-                            <p class="meal__price">18€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">Crème brulée</h4>
-                                <p class="meal__desc">Revisitée</p>
+                        <article class="meal" data-meal-index="1">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">Crème brulée</h4>
+                                    <p class="meal__desc">Revisitée</p>
+                                </div>
+                                <p class="meal__price">22€</p>
                             </div>
-                            <p class="meal__price">22€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">Tiramisu</h4>
-                                <p class="meal__desc">À la noisette</p>
+                        <article class="meal" data-meal-index="2">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">Tiramisu</h4>
+                                    <p class="meal__desc">À la noisette</p>
+                                </div>
+                                <p class="meal__price">23€</p>
                             </div>
-                            <p class="meal__price">23€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
                     </div>
                 </section>
