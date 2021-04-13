@@ -14,8 +14,23 @@
             max-width: 700px;
             position: relative;
 
-            @media screen and (min-width: map-get($screenSizes, "small") + 1px) {
+            @include for-device(small) {
+                transform: scale(1);
+                transition: transform 200ms ease-in-out;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            @include for-device-gt(small) {
                 margin-left: 2rem;
+                transform: translate(0, 0);
+                transition: transform 200ms ease-in-out;
+
+                &:hover {
+                    transform: translate(2vw, 0);
+                }
             }
         }
 
@@ -29,6 +44,11 @@
             border-radius: 100%;
             position: absolute;
             left: 0.5rem;
+        }
+
+        &:hover &__badge {
+            background-color: map-get($primary, 400);
+            transform: background-color;
         }
 
         &__panel {
@@ -47,6 +67,16 @@
                     color: map-get($colors, "primary");
                 }
             }
+        }
+
+        &:hover &__panel {
+            box-shadow: 0px 3px 5px 1px map-get($secondary, 100);
+            transform: box-shadow;
+        }
+
+        &:hover &__panel__icon--is-primary {
+            color: map-get($primary, 400);
+            transform: color;
         }
     }
 }
