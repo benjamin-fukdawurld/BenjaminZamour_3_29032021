@@ -218,7 +218,7 @@ body {
   left: 0.5rem;
 }
 
-.instructions__field__button {
+.instructions__field__panel {
   background-color: #f6f6f6;
   width: 100%;
   margin: 1rem;
@@ -228,12 +228,12 @@ body {
           box-shadow: 0px 3px 5px 2px #eaeaea;
 }
 
-.instructions__field__button__icon {
+.instructions__field__panel__icon {
   margin-right: 1.5rem;
   color: #7e7e7e;
 }
 
-.instructions__field__button__icon--is-primary {
+.instructions__field__panel__icon--is-primary {
   color: #8045d3;
 }
 
