@@ -9,14 +9,27 @@
     border-radius: 1rem;
     max-width: 750px;
 
+    &__text {
+        min-width: 0;
+        overflow: hidden;
+    }
+
     &__name {
         font-weight: 500;
         font-size: 0.875rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-shrink: 1;
     }
 
     &__desc {
         font-weight: 300;
         font-size: 0.8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-shrink: 1;
     }
 
     &__price {
