@@ -3,29 +3,34 @@
 .button {
     cursor: pointer;
     display: inline-block;
+    position: relative;
     padding: 1rem 1.5rem;
     border-radius: 3rem;
     color: white;
     text-align: center;
     font-size: 0.75rem;
     font-weight: 700;
-
+    z-index: 0;
     @include color-gradient;
-    background-position: center;
-    transition: background 0.8s;
-    &:hover {
-        background: map-get($secondary, 800)
-            radial-gradient(
-                circle,
-                transparent 1%,
-                map-get($primary, 900) 1%,
-                map-get($secondary, 900) 1%
-            )
-            center/15000%;
+
+    &::after {
+        content: "";
+        border-radius: 3rem;
+        @include color-gradient(map-get($primary, 500), map-get($secondary, 500));
+        box-shadow: 1px 1px 3px 2px map-get($primary, 300);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 400ms;
     }
-    &:active {
-        background-color: map-get($tertiary, 900);
-        background-size: 100%;
-        transition: background 0s;
+
+    &:hover {
+        &::after{
+            opacity: 1;
+        }
     }
 }
