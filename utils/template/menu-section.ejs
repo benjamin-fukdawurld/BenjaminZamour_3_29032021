@@ -1,8 +1,8 @@
-<section class="menu-section">
+<section class="menu-section menu-section--<%- type %>">
     <h3 class="menu-section__title"><%- name %></h3>
     <div class="menu-section__meals">
-        <% meals.forEach((meal) => { %>
-            <article class="meal">
+        <% meals.forEach((meal, index) => { %>
+            <article class="meal" data-meal-index="<%- index %>">
                 <div class="meal__info-container">
                     <div class="meal__text">
                         <h4 class="meal__name"><%- meal.name %></h4>

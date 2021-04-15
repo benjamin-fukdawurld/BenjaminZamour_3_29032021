@@ -67,4 +67,28 @@
         width: 2rem;
         background: #99e2d0;
     }
+
+    &--starters > &__meals {
+        animation: meal-entering 500ms ease-in-out forwards;
+    }
+
+    &--dishes > &__meals {
+        animation: meal-entering 700ms ease-in-out forwards;
+    }
+
+    &--desserts &__meals {
+        animation: meal-entering 900ms ease-in-out forwards;
+    }
+}
+
+@keyframes meal-entering {
+    0% {
+        transform: scale(0) translateY(100%);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: scale(1) translateY(0%);
+        opacity: 1;
+    }
 }
