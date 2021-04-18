@@ -1,7 +1,7 @@
 const fs = require("fs-extra");
 
-exports.install = (outputDir) => {
-    return fs.copy("../resources", outputDir, { overwrite: true })
+exports.install = (inputDir, outputDir) => {
+    return fs.copy(inputDir, outputDir, { overwrite: true })
         .then(() => {
             console.log("Resouces installation success")
         });
