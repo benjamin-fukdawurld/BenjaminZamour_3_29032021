@@ -1,0 +1,12 @@
+.github
+.vscode
+
+src/node_modules
+src/npm-debug.log
+dist
+
+docs
+README.md
+
+.gitattributes
+.gitignore
