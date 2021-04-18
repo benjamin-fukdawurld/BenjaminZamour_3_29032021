@@ -17,8 +17,8 @@ function render(file, data) {
 }
 
 
-exports.render = (outputDir) => {
-    return render("template/index.ejs", {
+exports.render = (templateDir, outputDir) => {
+    return render(templateDir + "/index.ejs", {
         title: "",
         header: { backButton: false, location: "Paris, Belleville" },
         main: {
@@ -33,7 +33,7 @@ exports.render = (outputDir) => {
         .then(() =>
             Promise.all(
                 restaurants.map((restaurant) => {
-                    return render("template/index.ejs", {
+                    return render(templateDir + "/index.ejs", {
                         title: restaurant.name,
                         header: { backButton: true },
                         main: {

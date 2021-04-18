@@ -4,12 +4,12 @@ const sass = require('sass');
 const autoprefixer = require('autoprefixer');
 const postcss = require('postcss');
 
-exports.render = (outputDir, outputStyle = "expanded") => {
+exports.render = (styleDir, outputDir, outputStyle = "expanded") => {
     return new Promise((resolve, reject) => {
         try {
             let result = sass.renderSync({
-                file: "scss/main.scss",
-                sourceMap: "scss/main.css.map",
+                file: styleDir + "/main.scss",
+                sourceMap: outputDir + "/main.css.map",
                 outFile: outputDir + "/main.css",
                 includePaths: ["scss"],
                 outputStyle
@@ -24,7 +24,7 @@ exports.render = (outputDir, outputStyle = "expanded") => {
         return postcss([ autoprefixer ]).process(
                 result.css.toString(),
                 {
-                    from: outputDir + "/main.css",
+                    from: styleDir + "/main.scss",
                     to: outputDir + "/main.css",
                     map: {
                         prev: result.map.toString(),

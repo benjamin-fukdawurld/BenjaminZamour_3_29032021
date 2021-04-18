@@ -7,9 +7,13 @@ const resourcesGenerator = require("./resources-generator");
 const htmlGenerator = require("./html-generator");
 const cssGenerator = require("./css-generator");
 
+console.log(JSON.stringify(argHandler.argv));
+
 const config = {
     outputDir: argHandler.argv.o,
-    resourcesDir: argHandler.argv.i
+    resourcesDir: argHandler.argv.i,
+    templateDir: argHandler.argv.t,
+    styleDir: argHandler.argv.s
 }
 
 let distDirStats = null;
@@ -27,10 +31,10 @@ if (!distDirStats.isDirectory())
 
 let distCssDirStats = null;
 try {
-    distCssDirStats = fs.statSync("../dist/css");
+    distCssDirStats = fs.statSync(config.outputDir + "/css");
 } catch (error) {
-    fs.mkdirSync("../dist/css");
-    distCssDirStats = fs.statSync("../dist/css");
+    fs.mkdirSync(config.outputDir + "/css");
+    distCssDirStats = fs.statSync(config.outputDir + "/css");
 }
 
 if (!distDirStats.isDirectory())
@@ -39,8 +43,8 @@ if (!distDirStats.isDirectory())
 }
 
 resourcesGenerator.install(config.resourcesDir, config.outputDir)
-    .then(() => htmlGenerator.render(config.outputDir))
-    .then(() => cssGenerator.render(config.outputDir + "/css"))
+    .then(() => htmlGenerator.render(config.templateDir, config.outputDir))
+    .then(() => cssGenerator.render(config.styleDir, config.outputDir + "/css"))
     .catch((err) => {
         throw new Error(err);
     });
