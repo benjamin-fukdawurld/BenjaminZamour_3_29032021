@@ -298,13 +298,13 @@ body {
     transform: rotate(0);
   }
   30% {
-    transform: rotate(2.8037035355turn);
+    transform: rotate(1.6884486651turn);
   }
   60% {
-    transform: rotate(3.2642842727turn);
+    transform: rotate(4.2529089564turn);
   }
   90% {
-    transform: rotate(4.3102376301turn);
+    transform: rotate(4.7113490561turn);
     z-index: inherit;
     opacity: 1;
   }
@@ -324,13 +324,13 @@ body {
     transform: rotate(0);
   }
   30% {
-    transform: rotate(2.8037035355turn);
+    transform: rotate(1.6884486651turn);
   }
   60% {
-    transform: rotate(3.2642842727turn);
+    transform: rotate(4.2529089564turn);
   }
   90% {
-    transform: rotate(4.3102376301turn);
+    transform: rotate(4.7113490561turn);
     z-index: inherit;
     opacity: 1;
   }
