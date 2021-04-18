@@ -54,111 +54,165 @@
                     <h2 class="restaurant-menu__banner__name">
                         La palette du goût
                     </h2>
-                    <i class="restaurant-menu__banner__like far fa-heart"></i>
+                    <i class="like-button far fa-heart">
+                        <i class="like-button__filled far fa-heart"></i>
+                    </i>
                 </div>
             </div>
             <div class="restaurant-menu__meals">
-                <section class="menu-section">
+                <section class="menu-section menu-section--starters">
                     <h3 class="menu-section__title">Entrées</h3>
                     <div class="menu-section__meals">
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">Fricassée d'escargot</h4>
-                                <p class="meal__desc">Au piment d'Espelette</p>
+                        <article class="meal" data-meal-index="0">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Fricassée d'escargot
+                                    </h4>
+                                    <p class="meal__desc">
+                                        Au piment d'Espelette
+                                    </p>
+                                </div>
+                                <p class="meal__price">25€</p>
                             </div>
-                            <p class="meal__price">25€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">
-                                    Foie gras de canard mi-cuit
-                                </h4>
-                                <p class="meal__desc">
-                                    Et ses copeaux de truffe noire
-                                </p>
+                        <article class="meal" data-meal-index="1">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Foie gras de canard mi-cuit
+                                    </h4>
+                                    <p class="meal__desc">
+                                        Et ses copeaux de truffe noire
+                                    </p>
+                                </div>
+                                <p class="meal__price">35€</p>
                             </div>
-                            <p class="meal__price">35€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">Oeuf au plat</h4>
-                                <p class="meal__desc">
-                                    Assaisonné à la truffe sur lit de caviar
-                                </p>
+                        <article class="meal" data-meal-index="2">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">Oeuf au plat</h4>
+                                    <p class="meal__desc">
+                                        Assaisonné à la truffe sur lit de caviar
+                                    </p>
+                                </div>
+                                <p class="meal__price">20€</p>
                             </div>
-                            <p class="meal__price">20€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
                     </div>
                 </section>
-                <section class="menu-section">
+                <section class="menu-section menu-section--dishes">
                     <h3 class="menu-section__title">Plats</h3>
                     <div class="menu-section__meals">
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">
-                                    Filet de boeuf aux herbes
-                                </h4>
-                                <p class="meal__desc">
-                                    Accompagné de sa ribambelle de légumes
-                                </p>
+                        <article class="meal" data-meal-index="0">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Filet de boeuf aux herbes
+                                    </h4>
+                                    <p class="meal__desc">
+                                        Accompagné de sa ribambelle de légumes
+                                    </p>
+                                </div>
+                                <p class="meal__price">40€</p>
                             </div>
-                            <p class="meal__price">40€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">
-                                    Parmentier de queue de boeuf
-                                </h4>
-                                <p class="meal__desc">
-                                    À la truffe noire sur sa purée de panais
-                                </p>
+                        <article class="meal" data-meal-index="1">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Parmentier de queue de boeuf
+                                    </h4>
+                                    <p class="meal__desc">
+                                        À la truffe noire sur sa purée de panais
+                                    </p>
+                                </div>
+                                <p class="meal__price">35€</p>
                             </div>
-                            <p class="meal__price">35€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">Filet de turbot</h4>
-                                <p class="meal__desc">Aux agrumes</p>
+                        <article class="meal" data-meal-index="2">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">Filet de turbot</h4>
+                                    <p class="meal__desc">Aux agrumes</p>
+                                </div>
+                                <p class="meal__price">44€</p>
                             </div>
-                            <p class="meal__price">44€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
                     </div>
                 </section>
-                <section class="menu-section">
+                <section class="menu-section menu-section--desserts">
                     <h3 class="menu-section__title">Desserts</h3>
                     <div class="menu-section__meals">
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">Paris-Brest</h4>
-                                <p class="meal__desc">Revisité</p>
+                        <article class="meal" data-meal-index="0">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">Paris-Brest</h4>
+                                    <p class="meal__desc">Revisité</p>
+                                </div>
+                                <p class="meal__price">18€</p>
                             </div>
-                            <p class="meal__price">18€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">
-                                    Macaron au chocolat d'exception
-                                </h4>
-                                <p class="meal__desc">
-                                    Et glace à la vanille de Madagascar
-                                </p>
+                        <article class="meal" data-meal-index="1">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Macaron au chocolat d'exception
+                                    </h4>
+                                    <p class="meal__desc">
+                                        Et glace à la vanille de Madagascar
+                                    </p>
+                                </div>
+                                <p class="meal__price">22€</p>
                             </div>
-                            <p class="meal__price">22€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
 
-                        <article class="meal">
-                            <div>
-                                <h4 class="meal__name">Mousse au chocolat</h4>
-                                <p class="meal__desc">
-                                    Au piment d'Espelette et à la truffe noire
-                                </p>
+                        <article class="meal" data-meal-index="2">
+                            <div class="meal__info-container">
+                                <div class="meal__text">
+                                    <h4 class="meal__name">
+                                        Mousse au chocolat
+                                    </h4>
+                                    <p class="meal__desc">
+                                        Au piment d'Espelette et à la truffe
+                                        noire
+                                    </p>
+                                </div>
+                                <p class="meal__price">23€</p>
                             </div>
-                            <p class="meal__price">23€</p>
+                            <div class="meal__ordered">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </article>
                     </div>
                 </section>

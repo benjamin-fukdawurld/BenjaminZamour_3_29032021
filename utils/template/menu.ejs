@@ -6,13 +6,13 @@
         />
         <div>
             <h2 class="restaurant-menu__banner__name"><%- main.restaurant.name %></h2>
-            <i class="restaurant-menu__banner__like far fa-heart"></i>
+            <%- include("like-button", {}) %>
         </div>
     </div>
     <div class="restaurant-menu__meals">
-        <%- include("menu-section", {name: "Entrées", meals: main.restaurant.starters}) %> <%-
-        include("menu-section", {name: "Plats", meals: main.restaurant.dishes}) %><%-
-        include("menu-section", {name: "Desserts", meals: main.restaurant.desserts}) %>
+        <%- include("menu-section", {name: "Entrées", meals: main.restaurant.starters, type: "starters"}) %> <%-
+        include("menu-section", {name: "Plats", meals: main.restaurant.dishes, type: "dishes"}) %><%-
+        include("menu-section", {name: "Desserts", meals: main.restaurant.desserts, type: "desserts"}) %>
     </div>
     <div class="flex flex--row flex--justify-center flex--align-center">
         <span class="button">Commandez</span>
