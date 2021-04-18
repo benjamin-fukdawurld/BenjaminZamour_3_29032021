@@ -10,7 +10,7 @@ jobs:
             - name: Checks HTML5
               uses: Cyb3r-Jak3/html5validator-action@v0.5
               with:
-                  root: .
+                  root: dist
                   format: json
                   css: true
             - uses: actions/upload-artifact@v2
