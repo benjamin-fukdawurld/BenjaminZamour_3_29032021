@@ -1,6 +1,7 @@
 # BenjaminZamour_3_29032021
 
 [![HTML5 Validator](https://github.com/benjamin-fukdawurld/BenjaminZamour_3_29032021/actions/workflows/main.yml/badge.svg?event=push)](https://github.com/benjamin-fukdawurld/BenjaminZamour_3_29032021/actions/workflows/main.yml)
+[![Docker Image CI](https://github.com/benjamin-fukdawurld/BenjaminZamour_3_29032021/actions/workflows/docker-image.yml/badge.svg)](https://github.com/benjamin-fukdawurld/BenjaminZamour_3_29032021/actions/workflows/docker-image.yml)
 
 Projet n°3 de la formation OCR DW - Dynamisez une page web avec des animations CSS
 
