@@ -4,9 +4,9 @@
         {
             "type": "npm",
             "script": "start",
-            "path": "utils/",
+            "path": "src/",
             "problemMatcher": [],
-            "label": "npm: start - utils",
+            "label": "npm: start - src",
             "detail": "node index.js",
             "group": {
                 "kind": "build",
