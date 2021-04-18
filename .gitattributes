@@ -1,6 +1,0 @@
-*.mp4 filter=lfs diff=lfs merge=lfs -text
-docs/Menu[[:space:]]-[[:space:]]À[[:space:]]la[[:space:]]française.png filter=lfs diff=lfs merge=lfs -text
-docs/Menu[[:space:]]-[[:space:]]La[[:space:]]note[[:space:]]enchantée.png filter=lfs diff=lfs merge=lfs -text
-docs/Menu[[:space:]]-[[:space:]]La[[:space:]]palette[[:space:]]du[[:space:]]goût.png filter=lfs diff=lfs merge=lfs -text
-docs/Menu[[:space:]]-[[:space:]]Le[[:space:]]délice[[:space:]]des[[:space:]]sens.png filter=lfs diff=lfs merge=lfs -text
-docs/Accueil.png filter=lfs diff=lfs merge=lfs -text
