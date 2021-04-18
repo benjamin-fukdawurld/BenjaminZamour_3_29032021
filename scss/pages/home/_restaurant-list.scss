@@ -88,14 +88,9 @@
             a {
                 width: 100%;
             }
-        }
 
-        &__like {
-            font-size: 2rem;
-            color: #777;
-            &:hover {
-                font-weight: 600;
-                color: map-get($colors, "primary");
+            & .like-button {
+                font-size: 2rem;
             }
         }
     }

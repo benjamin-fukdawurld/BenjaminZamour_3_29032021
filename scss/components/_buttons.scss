@@ -34,3 +34,26 @@
         }
     }
 }
+
+.like-button {
+    position: relative;
+    color: #777;
+    z-index: 0;
+
+    &__filled {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        font-weight: 600;
+        color: map-get($colors, "primary");
+        transform: scale(0);
+        transition: transform 300ms ease-in-out;
+    }
+
+    &:hover &__filled{
+        transform: scale(1);
+    }
+}
