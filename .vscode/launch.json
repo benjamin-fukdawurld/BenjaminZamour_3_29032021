@@ -8,7 +8,8 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch Program",
-            "cwd": "${workspaceFolder}/src",
+            "cwd": "${workspaceFolder}",
+            "args": ["-o dist", "-i resources"],
             "skipFiles": [
                 "<node_internals>/**"
             ],
