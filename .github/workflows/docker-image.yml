@@ -1,0 +1,27 @@
+name: Docker Image CI
+
+on:
+  push:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Login to Docker Hub
+      uses: docker/login-action@v1
+      with:
+          username: benjaminfdw
+          password: 7570da1b-aacc-46f0-b48b-3f824a292629
+    - name: Build the Docker image
+      run: docker build -t ocr-project3 .
+    - name: Run generator
+      run: docker run -v $(pwd)/dist:/usr/src/app/dist ocr-project3
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.3
+      with:
+        name: dist
+        path: ./dist
