@@ -7,8 +7,6 @@ const resourcesGenerator = require("./resources-generator");
 const htmlGenerator = require("./html-generator");
 const cssGenerator = require("./css-generator");
 
-console.log(JSON.stringify(argHandler.argv));
-
 const config = {
     outputDir: argHandler.argv.o,
     resourcesDir: argHandler.argv.i,
