@@ -396,10 +396,8 @@ body {
 }
 .restaurant-menu__banner > img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 .restaurant-menu__banner > div {
   display: flex;
