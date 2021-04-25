@@ -13,5 +13,14 @@
                 "isDefault": true
             }
         }
+
+        {
+            "type": "npm",
+            "script": "deploy",
+            "path": "src/",
+            "problemMatcher": [],
+            "label": "npm: deploy dist",
+            "detail": "node deploy.js",
+        }
     ]
 }

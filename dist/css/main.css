@@ -250,31 +250,12 @@ body {
   color: #8045d3;
   background-color: rgba(0, 0, 0, 0.5);
   font-size: 5rem;
-  -webkit-animation: overlay 3.15s ease-in-out forwards;
-          animation: overlay 3.15s ease-in-out forwards;
+  animation: overlay 3.15s ease-in-out forwards;
 }
 .load-spinner > .fas {
   position: relative;
   top: 50vh;
-  -webkit-animation: spinner-animation 3s ease-in-out forwards;
-          animation: spinner-animation 3s ease-in-out forwards;
-}
-
-@-webkit-keyframes overlay {
-  0% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-    z-index: inherit;
-  }
-  to {
-    opacity: 0;
-    z-index: -1000;
-  }
+  animation: spinner-animation 3s ease-in-out forwards;
 }
 
 @keyframes overlay {
@@ -293,54 +274,28 @@ body {
     z-index: -1000;
   }
 }
-@-webkit-keyframes spinner-animation {
-  0% {
-    transform: rotate(0);
-  }
-  30% {
-    transform: rotate(1.8488077282turn);
-  }
-  60% {
-    transform: rotate(3.1055897098turn);
-  }
-  90% {
-    transform: rotate(5.8402026957turn);
-    z-index: inherit;
-    opacity: 1;
-  }
-  97% {
-    transform: rotate(9turn);
-    z-index: inherit;
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(9turn);
-    opacity: 0;
-    z-index: -1000;
-  }
-}
 @keyframes spinner-animation {
   0% {
     transform: rotate(0);
   }
   30% {
-    transform: rotate(1.8488077282turn);
+    transform: rotate(1.8315546184turn);
   }
   60% {
-    transform: rotate(3.1055897098turn);
+    transform: rotate(2.7217249551turn);
   }
   90% {
-    transform: rotate(5.8402026957turn);
+    transform: rotate(3.9376710416turn);
     z-index: inherit;
     opacity: 1;
   }
   97% {
-    transform: rotate(9turn);
+    transform: rotate(7turn);
     z-index: inherit;
     opacity: 1;
   }
   100% {
-    transform: rotate(9turn);
+    transform: rotate(7turn);
     opacity: 0;
     z-index: -1000;
   }
@@ -350,8 +305,7 @@ body {
   background-color: #eaeaea;
   padding: 1rem 0.75rem;
   margin: 0 auto;
-  -webkit-animation: display-animation 4s ease-in-out forwards;
-          animation: display-animation 4s ease-in-out forwards;
+  animation: display-animation 4s ease-in-out forwards;
 }
 .restaurant-list__title {
   margin: 2rem 0;
@@ -361,20 +315,6 @@ body {
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
-}
-
-@-webkit-keyframes display-animation {
-  from {
-    display: none;
-    opacity: 0;
-  }
-  66% {
-    display: inherit;
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes display-animation {
@@ -420,8 +360,7 @@ body {
 .restaurant-card__image img {
   width: 100%;
   height: 25vh;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .restaurant-card__image__badge {
   position: absolute;
@@ -457,10 +396,8 @@ body {
 }
 .restaurant-menu__banner > img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 .restaurant-menu__banner > div {
   display: flex;
@@ -578,17 +515,6 @@ body {
   transform: rotate(2turn);
 }
 
-@-webkit-keyframes meal-entering {
-  0% {
-    transform: scale(0.8) translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1) translateY(0%);
-    opacity: 1;
-  }
-}
-
 @keyframes meal-entering {
   0% {
     transform: scale(0.8) translateY(100%);
@@ -600,41 +526,32 @@ body {
   }
 }
 .menu-section--starters .meal[data-meal-index="0"] {
-  -webkit-animation: meal-entering 500ms ease-in-out 0ms forwards;
-          animation: meal-entering 500ms ease-in-out 0ms forwards;
+  animation: meal-entering 500ms ease-in-out 0ms forwards;
 }
 .menu-section--starters .meal[data-meal-index="1"] {
-  -webkit-animation: meal-entering 500ms ease-in-out 200ms forwards;
-          animation: meal-entering 500ms ease-in-out 200ms forwards;
+  animation: meal-entering 500ms ease-in-out 200ms forwards;
 }
 .menu-section--starters .meal[data-meal-index="2"] {
-  -webkit-animation: meal-entering 500ms ease-in-out 400ms forwards;
-          animation: meal-entering 500ms ease-in-out 400ms forwards;
+  animation: meal-entering 500ms ease-in-out 400ms forwards;
 }
 
 .menu-section--dishes .meal[data-meal-index="0"] {
-  -webkit-animation: meal-entering 500ms ease-in-out 600ms forwards;
-          animation: meal-entering 500ms ease-in-out 600ms forwards;
+  animation: meal-entering 500ms ease-in-out 600ms forwards;
 }
 .menu-section--dishes .meal[data-meal-index="1"] {
-  -webkit-animation: meal-entering 500ms ease-in-out 800ms forwards;
-          animation: meal-entering 500ms ease-in-out 800ms forwards;
+  animation: meal-entering 500ms ease-in-out 800ms forwards;
 }
 .menu-section--dishes .meal[data-meal-index="2"] {
-  -webkit-animation: meal-entering 500ms ease-in-out 1000ms forwards;
-          animation: meal-entering 500ms ease-in-out 1000ms forwards;
+  animation: meal-entering 500ms ease-in-out 1000ms forwards;
 }
 
 .menu-section--desserts .meal[data-meal-index="0"] {
-  -webkit-animation: meal-entering 500ms ease-in-out 1200ms forwards;
-          animation: meal-entering 500ms ease-in-out 1200ms forwards;
+  animation: meal-entering 500ms ease-in-out 1200ms forwards;
 }
 .menu-section--desserts .meal[data-meal-index="1"] {
-  -webkit-animation: meal-entering 500ms ease-in-out 1400ms forwards;
-          animation: meal-entering 500ms ease-in-out 1400ms forwards;
+  animation: meal-entering 500ms ease-in-out 1400ms forwards;
 }
 .menu-section--desserts .meal[data-meal-index="2"] {
-  -webkit-animation: meal-entering 500ms ease-in-out 1600ms forwards;
-          animation: meal-entering 500ms ease-in-out 1600ms forwards;
+  animation: meal-entering 500ms ease-in-out 1600ms forwards;
 }
 /*# sourceMappingURL=main.css.map */
